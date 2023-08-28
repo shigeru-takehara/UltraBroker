@@ -3,7 +3,8 @@ It maybe
  - ultra simple
  - ultra easy
  - ultra powerful
- - ulra enconical
+ - ulra economical
+   
   micro-service broker.
 
 Simply put, if the broker can the following things.
@@ -13,4 +14,6 @@ Simply put, if the broker can the following things.
 - it's secure.
 - It's easy to register and de-register workers.
 
-There is MajorDomo protocol (https://rfc.zeromq.org/spec/7/). It's very good capability, but actual implementation would be complex, and "heatbeat" is too chatty in TCP/IP communication. In Java, there is very stable Servlet container, that is in a way similar to handle servlet objects while the MajoDomo handles workers. Combining the concept of the MajoDomo and maturity and stability of the Servlet container, we could build a broker that would does like the Major protocol, which is this UltraBroker.
+This broker is inspired by MajorDomo protocol (https://rfc.zeromq.org/spec/7/). 
+
+In Java, there is very stable Servlet container, that is in a way similar to handle servlet objects while the MajoDomo handles workers. Combining the concept of the MajoDomo and maturity and stability of the Servlet container, we could build a broker that would does like the Major protocol, which is this UltraBroker.
