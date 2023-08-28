@@ -1,5 +1,11 @@
 # UltraBroker
-It is a ultra simple but powerful micro-service broker.
+It maybe
+ - ultra simple
+ - ultra easy
+ - ultra powerful
+ - ulra enconical
+  micro-service broker.
+
 Simply put, if the broker can the following things.
 - we can run multiple workers.
 - we can control the number of same instance of workers based on the quality of requests.
