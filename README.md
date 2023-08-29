@@ -7,12 +7,13 @@ It maybe
    
   micro-service broker.
 
-Simply put, if the broker can the following things.
+Simply put, this broker can the following things.
 - we can run multiple workers.
 - we can control the number of same instance of workers based on the quality of requests.
 - we can manage workers.
 - it's secure.
 - It's easy to register and de-register workers.
+- Have a management GUI.
 
 This broker is inspired by MajorDomo protocol (https://rfc.zeromq.org/spec/7/). 
 
