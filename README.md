@@ -7,7 +7,7 @@ It maybe
    
   micro-service broker.
 
-Simply put, this broker can the following things.
+Simply put, this broker can have the following things.
 - we can run multiple workers.
 - we can control the number of same instance of workers based on the quality of requests.
 - we can manage workers.
