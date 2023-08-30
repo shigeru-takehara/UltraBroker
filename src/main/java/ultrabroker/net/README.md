@@ -5,4 +5,4 @@ There is a pair of Client and Server appliation that use this library in ultrabr
 
 As a communication rule, the Server always sends a message first; however, you can execute the Client applcation first without any issue because the Client application waits for the Server application until it is executed.
 
-Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/blob/06fff521b4f0a39717d0bcc8f87e230f241b23e0/README.md
+Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/edit/main/README.md
