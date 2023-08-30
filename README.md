@@ -18,4 +18,4 @@ This broker is inspired by MajorDomo protocol (https://rfc.zeromq.org/spec/7/).
 
 In Java, there is very stable Servlet container, that is in a way similar to handle servlet objects while the MajoDomo handles workers. Combining the concept of the MajoDomo and maturity and stability of the Servlet container, we could build a broker that would does like the Major protocol, which is this UltraBroker.
 
-We need to generate one jar file. Please read https://github.com/shigeru-takehara/UltraBroker/blob/6e312706137d42c9205994c00d4f6824a90732e8/src/main/java/ultrabroker/net/README.md
+We need to generate one jar file. Please read src/main/java/ultrabroker/net/README.md
