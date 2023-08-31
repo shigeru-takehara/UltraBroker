@@ -11,7 +11,7 @@ Simply put, this broker can have the following things.
 - we can run multiple workers.
 - we can control the number of same instance of workers.
 - we can manage workers (stop, start, and refresh).
-- it's secure since it's anyway Servlet container.
+- it's secure since broker objects and worker processors run on the same hardware.
 - Have a management GUI.
 
 This broker is inspired by MajorDomo protocol (https://rfc.zeromq.org/spec/7/). 
