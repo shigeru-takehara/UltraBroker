@@ -1,0 +1,1 @@
+powershell.exe -File  "c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.ps1"  %1
