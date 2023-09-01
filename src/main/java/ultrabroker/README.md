@@ -17,6 +17,6 @@ Step 4: Open http://localhost:8080 to open Tomcat home page.
 
 Step 5: Click ManagerApp button. (Enter login/password defined at Step 3.)
 
-Step 6: Scroll down the page and find "War file to deploy" section and upload UltraBroker1.jar file.
+Step 6: Scroll down the page and find "War file to deploy" section and upload UltraBroker1.jar file, which is located in the root directory.
 
 Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
