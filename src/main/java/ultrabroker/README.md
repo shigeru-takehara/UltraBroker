@@ -19,4 +19,8 @@ Step 5: Click ManagerApp button. (Enter login/password defined at Step 3.)
 
 Step 6: Scroll down the page and find "War file to deploy" section and upload UltraBroker1.jar file, which is located in the root directory.
 
+How to run Simple Java application: https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/sample/javaapp/README.md.
+
+How to run Simple Powershell appliaction: 
+
 Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
