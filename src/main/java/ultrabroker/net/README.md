@@ -1,5 +1,5 @@
 # ultraBrokerNet.jar
-We would like to create ultraBrakerNet.jar file that stores all Java classes under ultrabroker.net directory.
+We would like to create ultraBrakerNet.jar file that stores all Java classes under ultrabroker.net directory. Also you can find this jar file in UltraBroker1.war file in the root directory.
 
 There is a pair of Client and Server appliation that use this library in ultrabroker.net.sample directory. You should execute both programs so that they communicate each other.
 
