@@ -18,4 +18,8 @@ Assuming, Tomcat is running on port 8080.
 | Key-commandLine4 | {PORT_NUMBER} | Socket port number, which will be assigned by a Broker object |
 | Key-workingDirectory | C:/UltraBroker1 | The directory where SJA1.jar file is located|
 
+Sample Postman:
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister.PNG "WorkerRegister Postman")
+
+
 Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
