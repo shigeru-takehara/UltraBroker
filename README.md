@@ -26,6 +26,6 @@ The request information must be characters or string value based. The current Ja
 Our development uses Tomcat servlet container. You should be able to use any servlet container other than Tomcat, but our documentation will always uses the Tomcat.
 
 - Java JDK 17
-- Tomcat 9
+- Apache Tomcat 9
   
 We need to generate one jar file. Please read https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/net/README.md 
