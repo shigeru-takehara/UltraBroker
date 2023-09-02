@@ -21,6 +21,7 @@ Assuming, Tomcat is running on port 8080.
 | Key-workingDirectory | C:/UltraBroker1 | The directory where SJA1.jar file is located|
 
 Sample Postman:
+
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister.PNG "WorkerRegister Postman")
 
 After it is executed, Response message "Worker registration is success." should be returned.
@@ -32,6 +33,20 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 `<HTML><p>SJA1=Id:SJA1, CommandLine1:C:/java/jdk-17/bin/java, CommandLine2:-jar, CommandLine3:SJA1.jar, CommandLine4:{PORT_NUMBER}, WorkingDirectory:C:/Users/STAKEHAR/eclipse-workspace/UltraBroker1</p</HTML>`
 
 **Step 3: Run the worker.**
+
+| Object        | Value           | Description  |
+| ------------- |:-------------:| -----:|
+| Method      | POST | HTTP Method |
+| URL      | http://localhost:8080/UltraBroker1/Broker      |   Call the Broker. |
+| Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
+| Key-id | SJA1 | Worker ID run |
+| Key-request | a string value | Request data |
+
+Sample Postman:
+
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker.PNG "Calling Broker Postman")
+
+It returns the Response, and also it logs in C:\Temp\SimpleJavaApp1-" + port + ".txt file.
 
 
 Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
