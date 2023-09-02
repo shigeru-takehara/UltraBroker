@@ -7,7 +7,7 @@ For more inforamtion, read https://www.makeuseof.com/enable-script-execution-pol
 
 How to run sample Powershell script applcation is very much the same as that of sample Java application.
 
-**Step 1: Register a SimpleJavaApplication.**
+**Step 1 Register the worker.**
 
 | Object        | Value           | Description  |
 | ------------- |:-------------:| -----:|
@@ -42,9 +42,9 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker.PNG "Calling Broker Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-PS1.PNG "Calling Broker Postman")
 
-It returns the Response, and also it logs in C:\Temp\SimpleJavaApp1-" + port + ".txt file.
+
 
 **Step 4: Stop the worker.**
 
@@ -53,4 +53,4 @@ Call RegisterWorker again with different parameters as follows:
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-Stop.PNG "WorkerRegister Stop Postman")
 
 
-**Step 1 Register the worker.**
+
