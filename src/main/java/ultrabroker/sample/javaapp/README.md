@@ -48,5 +48,11 @@ Sample Postman:
 
 It returns the Response, and also it logs in C:\Temp\SimpleJavaApp1-" + port + ".txt file.
 
+**Step 4: Stop the worker.**
+
+Call RegisterWorker again with different parameters as follows:
+
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-Stop.PNG "WorkerRegister Stop Postman")
+
 
 Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
