@@ -21,6 +21,6 @@ Step 6: Scroll down the page and find "War file to deploy" section and upload Ul
 
 How to run Simple Java application: https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/sample/javaapp/README.md.
 
-How to run Simple Powershell appliaction: https://github.com/shigeru-takehara/UltraBroker/edit/main/src/main/powershell/sample/README.md.
+How to run Simple Powershell appliaction: https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/powershell/sample/README.md.
 
 Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
