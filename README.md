@@ -22,6 +22,10 @@ There is one important runtime evnrionment rule-Broker objects (Servets) and wor
 If you need to run many more workers, you could run it on more hardwares with a proxy server.
 
 The request information must be characters or string value based. The current Java and Powerscript based communication compontents can handle new lines; therefore, we can send multiple lines in a request. It is depends on how we build commuication component libraries.
+Currently the following communication components are provided:
+
+- Java
+- Powershell
 
 Our development uses Tomcat servlet container. You should be able to use any servlet container other than Tomcat, but our documentation will always use the Tomcat.
 
