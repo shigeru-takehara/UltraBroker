@@ -6,7 +6,7 @@ To run SimpleJavaApp1 application, which is located in src.main.java.ultrabroker
 
 Assuming, Tomcat is running on port 8080.
 
-Step 1: Register a SimpleJavaApplication.
+**Step 1: Register a SimpleJavaApplication.**
 
 | Object        | Value           | Description  |
 | ------------- |:-------------:| -----:|
@@ -25,10 +25,13 @@ Sample Postman:
 
 After it is executed, Response message "Worker registration is success." should be returned.
 
-Step 2: Check the worker registration.
+**Step 2: Check the worker registration.**
 
 Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which should return something like:
 
 `<HTML><p>SJA1=Id:SJA1, CommandLine1:C:/java/jdk-17/bin/java, CommandLine2:-jar, CommandLine3:SJA1.jar, CommandLine4:{PORT_NUMBER}, WorkingDirectory:C:/Users/STAKEHAR/eclipse-workspace/UltraBroker1</p</HTML>`
+
+**Step 3: Run the worker.**
+
 
 Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
