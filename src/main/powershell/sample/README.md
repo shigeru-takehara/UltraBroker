@@ -21,7 +21,7 @@ How to run sample Powershell script applcation is very much the same as that of 
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegisterPS1.PNG "WorkerRegister Powerscript Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-PS1.PNG "WorkerRegister Powerscript Postman")
 
 
 **Step 2: Check the worker registration.**
