@@ -2,7 +2,7 @@
 
 The easiest way is to run on Eclipse Java project. You can run either ServerApp or ClientApp first. Once both applications are executed, both exchange message and finish.
 
-ServerApp displayes these lines:
+**ServerApp displayes these lines:**
 
 `Server received: This is client response. count = 0`
 
@@ -16,7 +16,7 @@ ServerApp displayes these lines:
 
 `This is the third line.`
 
-ClientApp:
+**ClientApp:**
 
 `Client received: First Server Request`
 
