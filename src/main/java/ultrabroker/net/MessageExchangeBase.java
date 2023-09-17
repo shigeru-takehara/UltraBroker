@@ -5,9 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
+
+import ultrabroker.util.TimeUtil;
 
 public class MessageExchangeBase {
   public static String MESSAGE_END_OF_PROCESS = "__EOP__";
@@ -72,11 +71,7 @@ public class MessageExchangeBase {
   protected Message readMessage() throws IOException {
     Message message = new Message();
     while (!this.getReader().ready()) {
-      try {
-        TimeUnit.MILLISECONDS.sleep(100);
-      } catch (InterruptedException ie) {
-//        System.out.println("##### Interruted #####");
-      }
+      TimeUtil.waitForMilliSeconds(100);
     }
     while (this.getReader().ready()) {
       message.add(this.getReader().readLine());

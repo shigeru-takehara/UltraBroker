@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ultrabroker.net.MessageExchangeServer;
+import ultrabroker.service.support.ProcessManager;
 import ultrabroker.service.support.ProcessObject;
 
 @WebServlet("/Broker")
@@ -18,31 +18,32 @@ public class Broker extends WorkerRegister {
     String workerId = request.getParameter("id");
     String req = request.getParameter("request");
 
-    long threadId = java.lang.Thread.currentThread().getId();
-    ProcessObject processObject = this.getProcessManager().getWorkerProcAndBrokerServer(threadId, workerId);
-
-    if (processObject == null) {
-      MessageExchangeServer brokerServer = new MessageExchangeServer();
-      Process process = this.getProcessManager().startWorker(workerId, brokerServer.getPort());
-      this.getProcessManager().setWorkerProcAndBrokerServer(threadId, workerId, process, brokerServer);
-      brokerServer.waitForClientAccepts();
-      brokerServer.sendRequest(req);
-    } else {
+    ProcessObject processObject = null;
+    try {
+      processObject = this.getProcessManager().getProcessObject(workerId);
+      
+      if (ProcessManager.CloseServletContainer) { // at shutdown, this if block may be required.
+        return;
+      }
+      
       processObject.getBrokerServer().sendRequest(req);
+      response.getWriter().append(processObject.getBrokerServer().getResponse().toString());
     }
-    processObject = this.getProcessManager().getWorkerProcAndBrokerServer(threadId, workerId);
-    response.getWriter().append(processObject.getBrokerServer().getResponse().toString());
-  }
+    catch(Exception e) {
+      if (processObject == null) { // possibly the above getProcessObject method returns null.
+        response.getWriter().append("Please re-try.");
+        return;
+      }
+      
+      processObject.killProcess();
+      processObject = this.getProcessManager().createProcessObject(workerId);
+    }
 
-  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    doGet(request, response);
-  }
-
-  @Override
-  public void destroy() {
-    long threadId = java.lang.Thread.currentThread().getId();
-    this.getProcessManager().destroy(threadId);
-    super.destroy();
+    if (ProcessManager.CloseServletContainer) { // at shutdown, this if block may be required.
+      return;
+    }
+    
+    processObject.setActive(false);
   }
 
 }

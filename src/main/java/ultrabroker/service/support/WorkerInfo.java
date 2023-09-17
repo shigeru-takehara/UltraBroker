@@ -10,7 +10,9 @@ public class WorkerInfo {
   private List<String> commandStringList;
   private String workingDirectory;
   private boolean portNumberExistInCommandLine;
-
+  private WorkerConfigurationProperties configurationProperties = new WorkerConfigurationProperties();
+  private WorkerRuntimeProperties runtimeProperties = new WorkerRuntimeProperties();
+  
   public String getId() {
     if (id == null)
       id = "";
@@ -19,6 +21,15 @@ public class WorkerInfo {
 
   public void setId(String iD) {
     id = iD;
+  }
+
+  
+  public WorkerConfigurationProperties getConfigurationProperties() {
+    return configurationProperties;
+  }
+
+  public WorkerRuntimeProperties getRuntimeProperties() {
+    return runtimeProperties;
   }
 
   public boolean portNumberExistInCommandLine() {
@@ -90,6 +101,14 @@ public class WorkerInfo {
       sb.append(", CommandLine" + (i + 1) + ":" + commandStringList.get(i));
     }
     sb.append(", WorkingDirectory:" + this.workingDirectory);
+    
+    sb.append(", excessWorkerCheckingAccessCount:" + this.configurationProperties.getExcessWorkerCheckingAccessCount());
+    sb.append(", retryCount:" + this.configurationProperties.getRetryCount());
+    sb.append(", retryMilliSeconds:" + this.configurationProperties.getRetryMilliSeconds());
+    sb.append(", workerCountMax:" + this.configurationProperties.getWorkerCountMax());
+    sb.append(", workerRefreshCount:" + this.configurationProperties.getWorkerRefreshCount());
+    sb.append(", enableWorkerRefresh:" + this.configurationProperties.isEnableWorkerRefresh());
+
     return sb.toString();
 
   }

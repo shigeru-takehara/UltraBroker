@@ -2,7 +2,8 @@ package ultrabroker.net;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.concurrent.TimeUnit;
+
+import ultrabroker.util.TimeUtil;
 
 public class MessageExchangeClient extends MessageExchangeBase {
 
@@ -21,11 +22,7 @@ public class MessageExchangeClient extends MessageExchangeBase {
         this.setSocket(socket);
         break;
       } catch (Exception e) {
-        try {
-          TimeUnit.MILLISECONDS.sleep(100);
-        } catch (InterruptedException ie) {
-//          System.out.println("##### Interruted #####");
-        }
+        TimeUtil.waitForMilliSeconds(100);
       }
     }
     return socket;

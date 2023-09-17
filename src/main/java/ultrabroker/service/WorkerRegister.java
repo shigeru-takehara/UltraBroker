@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import ultrabroker.service.support.ProcessManager;
 import ultrabroker.service.support.WorkerInfo;
+import ultrabroker.util.StringUtil;
 
 @WebServlet("/WorkerRegister")
 public class WorkerRegister extends HttpServlet {
@@ -40,12 +41,32 @@ public class WorkerRegister extends HttpServlet {
     String commandLine10 = request.getParameter("commandLine10");
     String workingDirectory = request.getParameter("workingDirectory");
 
+    String excessWorkerCheckingAccessCount = request.getParameter("excessWorkerCheckingAccessCount");
+    String retryCount = request.getParameter("retryCount");
+    String retryMilleSeconds = request.getParameter("retryMilleSeconds");
+    String workerCountMax = request.getParameter("workerCountMax");
+    String workerRefreshCount = request.getParameter("workerRefreshCount");
+    String enableWorkerRefresh = request.getParameter("enableWorkerRefresh");
+
     WorkerInfo workerInfo = new WorkerInfo();
     workerInfo.setId(workerId);
     workerInfo.setCommandStringList(commandLine1, commandLine2, commandLine3, commandLine4, commandLine5,
                                     commandLine6, commandLine7, commandLine8, commandLine9, commandLine10);
     workerInfo.setWorkingDirectory(workingDirectory);
 
+    workerInfo.getConfigurationProperties().setExcessWorkerCheckingAccessCount(StringUtil.isEmpty(excessWorkerCheckingAccessCount) ? 
+        0 :Integer.parseInt(excessWorkerCheckingAccessCount));
+    workerInfo.getConfigurationProperties().setRetryCount(StringUtil.isEmpty(retryCount) ? 
+        0 : Integer.parseInt(retryCount));
+    workerInfo.getConfigurationProperties().setRetryMilliSeconds(StringUtil.isEmpty(retryMilleSeconds) ? 
+        0 : Integer.parseInt(retryMilleSeconds));
+    workerInfo.getConfigurationProperties().setWorkerCountMax(StringUtil.isEmpty(workerCountMax) ? 
+        0 : Integer.parseInt(workerCountMax));
+    workerInfo.getConfigurationProperties().setWorkerRefreshCount(StringUtil.isEmpty(workerRefreshCount) ? 
+        0 : Integer.parseInt(workerRefreshCount));
+    workerInfo.getConfigurationProperties().setEnableWorkerRefresh(StringUtil.isEmpty(enableWorkerRefresh) ? 
+        true :Boolean.parseBoolean(enableWorkerRefresh));
+    
     this.getProcessManager().registerWorker(workerInfo);
 
     response.getWriter()
