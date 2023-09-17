@@ -15,9 +15,9 @@ In order to run a worker, we need to register the worker to UltraBroker. This ca
 | commandLine8 | |  |
 | commandLine9 |  | |
 | commandLine10 | |  |
-| workingDirectory | C:/UltraBroker1 | The directory where SJA1.jar file is located|
-| excessWorkerCheckingAccessCount |  |  |
-| retryCount |  |  |
+| workingDirectory | The directory path where the worker's exe or command file is located.| |
+| excessWorkerCheckingAccessCount | the number of worker access counts before checking the worker's activity. Whenever this count is met, UltraBroker decides to reduce one worker's processor so that UltraBroker manages the number of active processes of the worker. | Default value: 500   |
+| retryCount | When UltraBroker receives the request, it tries to find an available worker. If maximum number of workers is running already and all workers are busy, it will retry to get an a |  |
 | retryMilleSeconds |  |  |
 | workerCountMax |  |  |
 | workerRefreshCount |  |  |
