@@ -5,7 +5,7 @@ In order to run a worker, we need to register the worker to UltraBroker. This ca
 | Key        | Description           | Example Value  |
 | ------------- |:-------------:| -----:|
 | workerId      | Worker ID; it's a short string value that uniquely identifies the worker. This ID value could be used in a part of URL in the future. | "SJA1", "PS1", etc. |
-| commandLine1 | These are command lines to execute the worker. One of commandLines must include "{PORT_NUMBER}" so that UlraBroker can pass the communication socket port.  | "C:/java/jdk-17/bin/java" |
+| commandLine1 | These are command lines to execute the worker. One of commandLines must include "{PORT_NUMBER}" so that UlraBroker can pass the communication socket port.  | "C:/java/jdk-17/bin/java", "C:/sample/PowerShellApp.bat", etc. |
 | commandLine2 |  |  |
 | commandLine3 |  | |
 | commandLine4 | |  |
