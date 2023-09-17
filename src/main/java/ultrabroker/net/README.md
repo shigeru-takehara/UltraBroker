@@ -5,4 +5,6 @@ There is a pair of Client and Server appliation that use this library in ultrabr
 
 As a communication rule, the Server always sends a message first; however, you can execute the Client applcation first without any issue because the Client application waits for the Server application until it is executed.
 
+A sample application is located in src/main/java/ulrabroker/net/sample directory. Please read https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/net/sample/README.md.
+
 Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
