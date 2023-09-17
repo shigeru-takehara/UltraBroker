@@ -1,15 +1,16 @@
-# UltraBroker - Version 0.1
+# UltraBroker - Version 0.2
 It maybe
  - ultra simple
  - ultra easy
  - ultra powerful
- - ulra economical
+ - ulra economical (we can manage by ourselves.)
    
   micro-service broker.
 
 Simply put, this broker can have the following things.
-- we can run multiple workers. 
-- we can control the number of same instance of workers. (not right now)
+- we can set the maximum number of processes for a worker.
+- The number of processes are automatically adjusted based on the the number of accesses
+- A worker configuration can be hot updated under being executed.
 - we can manage workers (stop, start, and refresh). (not complete)
 - it's secure since broker objects and worker processors run on the same hardware.
 - Have a management GUI. (not right now)
