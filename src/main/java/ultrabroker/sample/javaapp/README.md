@@ -32,6 +32,8 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 
 `<HTML><p>SJA1=Id:SJA1, CommandLine1:C:/java/jdk-17/bin/java, CommandLine2:-jar, CommandLine3:SJA1.jar, CommandLine4:{PORT_NUMBER}, WorkingDirectory:C:/Users/STAKEHAR/eclipse-workspace/UltraBroker1, excessWorkerCheckingAccessCount:500, retryCount:600, retryMilliSeconds:100, workerCountMax:20, workerRefreshCount:30, enableWorkerRefresh:true</p></HTML>`
 
+In the above there are other default configuration variables, which are described in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/WorkerRegistration.md.
+
 **Step 3: Run the worker.**
 
 | Object        | Value           | Description  |
