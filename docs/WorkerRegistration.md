@@ -17,8 +17,8 @@ In order to run a worker, we need to register the worker to UltraBroker. This ca
 | commandLine10 | |  |
 | workingDirectory | The directory path where the worker's exe or command file is located.| |
 | excessWorkerCheckingAccessCount | the number of worker access counts before checking the worker's activity. Whenever this count is met, UltraBroker decides to reduce one worker's processor so that UltraBroker manages the number of active processes of the worker. | Default value: 500   |
-| retryCount | When UltraBroker receives the request, it tries to find an available worker. If maximum number of workers is running already and all workers are busy, it will retry to get an a |  |
-| retryMilleSeconds |  |  |
-| workerCountMax |  |  |
-| workerRefreshCount |  |  |
-| enableWorkerRefresh |  |  |
+| retryCount | When UltraBroker receives the request, it tries to find an available worker. If maximum number of workers is running already and all workers are busy, it will retry to get an available worker. | Default value: 600  |
+| retryMilleSeconds | Waiting duration before retry. | Default value: 100 |
+| workerCountMax | The maximum number of process of a worker | Default value: 5  |
+| workerRefreshCount | A worker is terminated and re-created after the number of access is made. | Default value: 100 |
+| enableWorkerRefresh | true: refresh worker, false: no refresh | Defalut value: true |
