@@ -70,7 +70,7 @@ function Process-Operation {
 
         $ResponseString = & $operation
 
-        $writer.WriteLine("Client received:" + $ResponseString)
+        $writer.WriteLine($ResponseString)
 
     }
   }
