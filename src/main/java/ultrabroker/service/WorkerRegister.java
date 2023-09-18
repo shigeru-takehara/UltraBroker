@@ -43,7 +43,7 @@ public class WorkerRegister extends HttpServlet {
 
     String excessWorkerCheckingAccessCount = request.getParameter("excessWorkerCheckingAccessCount");
     String retryCount = request.getParameter("retryCount");
-    String retryMilleSeconds = request.getParameter("retryMilleSeconds");
+    String retryMilliSeconds = request.getParameter("retryMilleSeconds");
     String workerCountMax = request.getParameter("workerCountMax");
     String workerRefreshCount = request.getParameter("workerRefreshCount");
     String enableWorkerRefresh = request.getParameter("enableWorkerRefresh");
@@ -58,8 +58,8 @@ public class WorkerRegister extends HttpServlet {
         0 :Integer.parseInt(excessWorkerCheckingAccessCount));
     workerInfo.getConfigurationProperties().setRetryCount(StringUtil.isEmpty(retryCount) ? 
         0 : Integer.parseInt(retryCount));
-    workerInfo.getConfigurationProperties().setRetryMilliSeconds(StringUtil.isEmpty(retryMilleSeconds) ? 
-        0 : Integer.parseInt(retryMilleSeconds));
+    workerInfo.getConfigurationProperties().setRetryMilliSeconds(StringUtil.isEmpty(retryMilliSeconds) ? 
+        0 : Integer.parseInt(retryMilliSeconds));
     workerInfo.getConfigurationProperties().setWorkerCountMax(StringUtil.isEmpty(workerCountMax) ? 
         0 : Integer.parseInt(workerCountMax));
     workerInfo.getConfigurationProperties().setWorkerRefreshCount(StringUtil.isEmpty(workerRefreshCount) ? 
