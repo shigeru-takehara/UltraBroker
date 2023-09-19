@@ -22,3 +22,7 @@ In order to run a worker, we need to register the worker to UltraBroker. This ca
 | workerCountMax | The maximum number of process of a worker | Default value: 5  |
 | workerRefreshCount | A worker is terminated and re-created after the number of access is made. | Default value: 100 |
 | enableWorkerRefresh | true: refresh worker, false: no refresh | Defalut value: true |
+
+All default values based on the number of access counts are for small applications. If you have a large number of access, we should test it before deciding the values.
+The workerRefreshCount could be good if the worker needs to be refreshed (shutdown and restart). For example, our Java example does not have any issue with many accesses, we many not need to refresh workers at all; however, Powershell script example needs to be refresh in 20 to 30 counts. If it is not refreshed, it will stop working. It could be a bug, but for now we can't figure it out and this refersh works fine for many accesses.
+We will provide JMeter performance testing scripts to see it.
