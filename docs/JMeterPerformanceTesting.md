@@ -16,4 +16,6 @@ Registration information is located in
 - https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/sample/javaapp/README.md
 - https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/powershell/sample/README.md
 
+Complete worker registration inforamation is in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/WorkerRegistration.md.
+
   
