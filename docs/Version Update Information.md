@@ -15,4 +15,6 @@ This is the first release and it's more prototype. One broker thread can
 - register workers
 - run workers
 - stop workers
+- Java communicationExchange components
+- Powerscript communicationExchange components
   
