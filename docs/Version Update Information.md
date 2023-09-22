@@ -6,6 +6,8 @@ UltraBroker can
 - control the number of workers running (based on amount of access, the number of runnng workers is managed between 1 to maximum processes)
 - allow to refresh workers
 - share connections of workers
+  
+Added Performance testing with JMeter.
 
 Basically, Broker becomes more proctical.
 
@@ -17,4 +19,5 @@ This is the first release and it's more prototype. One broker thread can
 - stop workers
 - Java communicationExchange components
 - Powerscript communicationExchange components
+- Sample programs for Java and PowerShell scripts
   
