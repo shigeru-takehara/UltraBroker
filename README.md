@@ -36,3 +36,5 @@ Our development uses Tomcat servlet container. You should be able to use any ser
 We may need to generate one jar file. Please read https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/net/README.md.
 
 How to run UltraBroker server is described in https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
+
+Version update information: https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/Version%20Update%20Information.md
