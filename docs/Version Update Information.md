@@ -2,7 +2,7 @@
 
 Version 0.2 (9/17/2023)
 
-Broker can
+UltraBroker can
 - control the number of workers running (based on amount of access, the number of runnng workers is managed between 1 to maximum processes)
 - allow to refresh workers
 - share connections of workers
