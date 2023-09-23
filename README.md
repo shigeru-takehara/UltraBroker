@@ -27,6 +27,7 @@ Currently the following communication components are provided:
 
 - Java
 - Powershell
+- NodeJS (TypeScript) 
 
 Our development uses Tomcat servlet container. You should be able to use any servlet container other than Tomcat, but our documentation will always use the Tomcat.
 
