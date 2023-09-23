@@ -9,6 +9,8 @@ UltraBroker can
   
 Added Performance testing with JMeter.
 
+Added NodeJS communicationExchange components (soon)
+
 Basically, Broker becomes more proctical.
 
 Version 0.1 (9/3/2023)
