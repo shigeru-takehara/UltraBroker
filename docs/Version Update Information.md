@@ -9,7 +9,7 @@ UltraBroker can
   
 Added Performance testing with JMeter.
 
-Added NodeJS communicationExchange components (soon)
+Added NodeJS communicationExchange components.
 
 Basically, Broker becomes more proctical.
 
