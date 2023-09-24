@@ -24,7 +24,7 @@ Sample Postman:
 
 Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which should return something like:
 
-`<HTML><p>PS1=Id:PS1, CommandLine1:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat, CommandLine2:{PORT_NUMBER}, WorkingDirectory:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample</p></HTML>`
+`<HTML><p>NJA1=Id:NJA1, CommandLine1:node, CommandLine2:NodeJSApp1.js, CommandLine3:{PORT_NUMBER}, WorkingDirectory:C:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\nodejs\sample, excessWorkerCheckingAccessCount:500, retryCount:600, retryMilliSeconds:100, workerCountMax:5, workerRefreshCount:160, enableWorkerRefresh:true</p></HTML>`
 
 **Step 3: Run the worker.**
 
