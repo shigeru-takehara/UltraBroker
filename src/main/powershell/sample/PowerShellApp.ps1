@@ -1,10 +1,12 @@
 . .\MessageExchangeClient.ps1
 
+$global:count = 0
+
 function MyFunction {
   
   Write-Host "[MyFunction] Received parameter: $RequestString"
-  
-  return $RequestString
+  $global:count++
+  return $RequestString.Trim() + " " + $global:count
 }
 
 $serverAddress = "127.0.0.1"
