@@ -38,7 +38,7 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-PS1.PNG "Calling Broker Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-NJA1.PNG "Calling Broker Postman")
 
 If you have many access, setting workerRefreshCount variable is recommended. The value should be 160. Based on experience, the more than 164 acess makes socket port communication stop working. This does not occur on Java application, and it occurs on NodeJS application. The cause of issue has not been found. If we set the workerRefreshCount, it runs good.
 
