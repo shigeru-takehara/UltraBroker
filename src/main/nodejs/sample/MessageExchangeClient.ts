@@ -25,7 +25,6 @@ export function ProcessOperation(callBack: (message: string)=>string) {
   //  console.log('Do connect will be called. try=' + retries);
     client.connect(port, HOST, () => {
     });
-    client.setNoDelay(true);
   }
   doConnect();
 
