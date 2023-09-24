@@ -10,7 +10,7 @@ How to run sample Node JS applcation is very much the same as the sample Java ap
 | URL      | http://localhost:8080/UltraBroker1/WorkerRegister      |   WorkerRegister API where we can register a worker process. |
 | Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
 | Key-workerId | NJA1 | Worker ID (You can choose any word) |
-| Key-commandLine1 | node | Assume Node JS has been installed. |
+| Key-commandLine1 | node | Assume Node JS has been installed. Also TypeScript is installed within Node JS.|
 | Key-commandLine2 | NodeJSApp1.js | It's a generated JavaScript file. |
 | Key-commandLine2 |  {PORT_NUMBER} | Socket port number, which will be assigned by a Broker object |
 | Key-workingDirectory | C:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\nodejs\sample | The directory where the JavaScript file is located|
