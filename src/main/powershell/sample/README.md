@@ -44,7 +44,7 @@ Sample Postman:
 
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-PS1.PNG "Calling Broker Postman")
 
-If you have many access, setting workerRefreshCount variable is recommended. The value should be 20 to 30. Based on experience, the more than 100 acess makes socket port communication stop working. This does not occur on Java application, and it occurs only on Powershell application. The cause of issue has not been found. If we set the workerRefreshCount, it runs good.
+If you have many access, setting workerRefreshCount variable is recommended. The value should be 90. Based on experience, the more than 97 acess makes socket port communication stop working. This does not occur on Java application, and it occurs only on Powershell application. The cause of issue has not been found. If we set the workerRefreshCount, it runs good.
 
 **Step 4: Stop the worker.**
 
