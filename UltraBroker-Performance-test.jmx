@@ -63,7 +63,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PS1 Registration" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PowerScript Sample Application 1 Registration" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="workerId" elementType="HTTPArgument">
@@ -75,7 +75,7 @@
               </elementProp>
               <elementProp name="commandLine1" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat</stringProp>
+                <stringProp name="Argument.value">c:\0\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">commandLine1</stringProp>
@@ -89,7 +89,7 @@
               </elementProp>
               <elementProp name="workingDirectory" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample</stringProp>
+                <stringProp name="Argument.value">c:\0\UltraBroker1\src\main\powershell\sample</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workingDirectory</stringProp>
@@ -103,17 +103,10 @@
               </elementProp>
               <elementProp name="workerRefreshCount" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">30</stringProp>
+                <stringProp name="Argument.value">90</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workerRefreshCount</stringProp>
-              </elementProp>
-              <elementProp name="workerCountMax" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">3</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">workerCountMax</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -132,7 +125,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SJA1 Registration" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Java Sample Application 1 Registration" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="workerId" elementType="HTTPArgument">
@@ -172,7 +165,7 @@
               </elementProp>
               <elementProp name="workingDirectory" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">C:\dev\mydev\UltraBroker\UltraBroker</stringProp>
+                <stringProp name="Argument.value">C:\0\UltraBroker1</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workingDirectory</stringProp>
@@ -183,6 +176,75 @@
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">enableWorkerRefresh</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/UltraBroker1/WorkerRegister</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Node JS Sample Application 1 Registration" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="workerId" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">NJA1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">workerId</stringProp>
+              </elementProp>
+              <elementProp name="commandLine1" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">node</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">commandLine1</stringProp>
+              </elementProp>
+              <elementProp name="commandLine2" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">NodeJSApp1.js</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">commandLine2</stringProp>
+              </elementProp>
+              <elementProp name="commandLine3" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{PORT_NUMBER}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">commandLine3</stringProp>
+              </elementProp>
+              <elementProp name="workingDirectory" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">C:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\nodejs\sample</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">workingDirectory</stringProp>
+              </elementProp>
+              <elementProp name="enableWorkerRefresh" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">true</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">enableWorkerRefresh</stringProp>
+              </elementProp>
+              <elementProp name="workerRefreshCount" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">160</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">workerRefreshCount</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -356,6 +418,40 @@
               <elementProp name="request" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">U2ltcGxlSmF2YUFwcDEgU3RhcnRlZC4KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KU2ltcGxlSmF2YUFwcDEgRW5kZWQuCg==</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">request</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/UltraBroker1/Broker</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="NJA1 Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">NJA1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">id</stringProp>
+              </elementProp>
+              <elementProp name="request" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">Hello Server </stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">request</stringProp>
