@@ -17,7 +17,7 @@ How to run sample Node JS applcation is very much the same as the sample Java ap
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-PS1.PNG "WorkerRegister Powerscript Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-NJA1.PNG "WorkerRegister NodeJS Postman")
 
 
 **Step 2: Check the worker registration.**
