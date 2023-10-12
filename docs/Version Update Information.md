@@ -1,5 +1,11 @@
 # Version Update Inforamtion
 
+Version 0.3 (10/11/2023)
+
+Message communcation is updated to use process input and output stream instead of sockets, which makes UltraBraker:
+- much faster
+- resolve issues with Powershell and NodeJS where socket communication stops working.
+
 Version 0.2 (9/17/2023)
 
 UltraBroker can
