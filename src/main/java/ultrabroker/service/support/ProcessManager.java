@@ -6,12 +6,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ProcessManager {
+  
   private static Map<String, WorkerInfo> workerInfoMap = new ConcurrentHashMap<>();
   private static Map<String, ProcessStore> workerProcessStoreMap = new ConcurrentHashMap<>();
   private static ProcessManager singletonsProcessManager;
   
   public static boolean CloseServletContainer = false;
-
+  
   private ProcessManager() {
     super();
   }
@@ -45,7 +46,7 @@ public class ProcessManager {
     return processStore.createProcessObject();
   }
   
-  public void stopAllWorkers() {
+  public void stopAllWorkers() throws IOException {
     Iterator<ProcessStore> it = this.getWorkerProcessStoreMap().values().iterator();
     while (it.hasNext()) {
       ProcessStore itObj = it.next();
@@ -53,7 +54,7 @@ public class ProcessManager {
     }
   }
   
-  public void kilAllWorkers() {
+  public void kilAllWorkers() throws IOException {
     Iterator<ProcessStore> it = this.getWorkerProcessStoreMap().values().iterator();
     while (it.hasNext()) {
       ProcessStore itObj = it.next();
@@ -61,7 +62,7 @@ public class ProcessManager {
     }
   }
   
-  public void stopWorker(String workerId) {
+  public void stopWorker(String workerId) throws IOException {
     this.getWorkerProcessStoreMap().get(workerId).stopAllWorkers();
   }
   

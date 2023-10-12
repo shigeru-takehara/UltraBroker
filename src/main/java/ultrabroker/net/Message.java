@@ -9,7 +9,7 @@ public class Message extends ArrayList<String> {
     for(int i=0; i<this.size(); i++) {
       result.append(this.get(i));
       if (i < this.size() - 1) {
-        result.append(System.lineSeparator());
+        result.append("\n");
       }
     }
     return result.toString();

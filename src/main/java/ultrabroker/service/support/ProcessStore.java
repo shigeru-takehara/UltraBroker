@@ -1,12 +1,11 @@
 package ultrabroker.service.support;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
-import ultrabroker.net.MessageExchangeServer;
+import ultrabroker.net.ProcessMessageExchangeServer;
 
 public class ProcessStore extends ArrayList<ProcessObject> {
   private static final long serialVersionUID = 1L;
@@ -49,7 +48,7 @@ public class ProcessStore extends ArrayList<ProcessObject> {
     return null;
   }
   
-  protected void cleanupExcessWorker(int currentSize, int index) {
+  protected void cleanupExcessWorker(int currentSize, int index) throws IOException {
     if (currentSize-1 == index) {
       return;
     }
@@ -65,7 +64,7 @@ public class ProcessStore extends ArrayList<ProcessObject> {
     }
   }
   
-  public void closeClientAndServer(ProcessObject processObject) {
+  public void closeClientAndServer(ProcessObject processObject) throws IOException {
     processObject.getBrokerServer().sendCloseRequest();
     try {
       processObject.getBrokerServer().close();
@@ -74,7 +73,7 @@ public class ProcessStore extends ArrayList<ProcessObject> {
     }
   }
   
-  public void killClientAndServer(ProcessObject processObject) {
+  public void killClientAndServer(ProcessObject processObject) throws IOException {
     this.closeClientAndServer(processObject);
     
     Stream<ProcessHandle> sp = processObject.getProcess().children();
@@ -83,13 +82,27 @@ public class ProcessStore extends ArrayList<ProcessObject> {
     processObject.getProcess().destroyForcibly();
   }
   
-  public void stopAllWorkers() {
-    this.forEach(processObject -> this.closeClientAndServer(processObject));
+  public void stopAllWorkers() throws IOException {
+    this.forEach(processObject -> {
+      try {
+        this.closeClientAndServer(processObject);
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    });
     this.clear();
   }
 
-  public void killAllWorkers() {
-    this.forEach(processObject -> this.killClientAndServer(processObject));
+  public void killAllWorkers() throws IOException {
+    this.forEach(processObject -> {
+      try {
+        this.killClientAndServer(processObject);
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    });
     this.clear();
   }
 
@@ -98,17 +111,11 @@ public class ProcessStore extends ArrayList<ProcessObject> {
       return null;
     }
     
-    MessageExchangeServer brokerServer = new MessageExchangeServer();
-    ProcessBuilder processBuilder = new ProcessBuilder(this.getWorkerInfo().getCommandStringListWithPortNumber(brokerServer.getPort()));
-
-    processBuilder.directory(new File(this.getWorkerInfo().getWorkingDirectory()));
-    Process process = processBuilder.start();
-
-    ProcessObject processObject = new ProcessObject(process, brokerServer);
-    processObject.setActive(true);
-    
+    ProcessObject processObject = null;
+    ProcessMessageExchangeServer server = new ProcessMessageExchangeServer(this.getWorkerInfo().getCommandStringArray(), 
+                                                  this.getWorkerInfo().getWorkingDirectory(), null);
+    processObject = new ProcessObject(null, server);
     this.add(0, processObject);
-    brokerServer.waitForClientAccepts();
 
     return processObject;
   }

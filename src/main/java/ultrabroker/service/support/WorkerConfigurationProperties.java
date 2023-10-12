@@ -1,7 +1,7 @@
 package ultrabroker.service.support;
 
 public class WorkerConfigurationProperties {
-  protected static int EXCESS_WORKER_CHECKING_ACCESS_COUNT = 500; // Access count for excess worker checking 
+  protected static int EXCESS_WORKER_CHECKING_ACCESS_COUNT = 1000; // Access count for excess worker checking 
   protected static int RETRY_COUNT = 600; // 600 times 
   protected static int RETRY_MILLISECONDS = 100;
   protected static int WORKER_COUNT_MAX = 5;

@@ -43,7 +43,7 @@ public class WorkerRegister extends HttpServlet {
 
     String excessWorkerCheckingAccessCount = request.getParameter("excessWorkerCheckingAccessCount");
     String retryCount = request.getParameter("retryCount");
-    String retryMilliSeconds = request.getParameter("retryMilleSeconds");
+    String retryMilliSeconds = request.getParameter("retryMilliSeconds");
     String workerCountMax = request.getParameter("workerCountMax");
     String workerRefreshCount = request.getParameter("workerRefreshCount");
     String enableWorkerRefresh = request.getParameter("enableWorkerRefresh");

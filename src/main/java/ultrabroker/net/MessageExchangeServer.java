@@ -3,7 +3,7 @@ package ultrabroker.net;
 import java.io.IOException;
 import java.net.ServerSocket;
 
-public class MessageExchangeServer extends MessageExchangeBase {
+public class MessageExchangeServer extends MessageExchangeBase implements IMessageExchangeServer {
   protected static final int MIN_PORT_NUMBER = 1024;
   protected static final int MAX_PORT_NUMBER = 65535;
   protected static final String ERROR_MESSAGE_PORT_NUMBER = "No available port found between ";
@@ -11,8 +11,8 @@ public class MessageExchangeServer extends MessageExchangeBase {
   private ServerSocket serverSocket;
 
   public MessageExchangeServer() throws IllegalStateException {
-    this.setServerSocket(getAvailableServerSocket());
     synchronized (this) { // avoid multiple threads get the same port#
+      this.setServerSocket(getAvailableServerSocket());
       this.setPort(this.getServerSocket().getLocalPort());
     }
     System.out.println("Port =" + this.getPort());
@@ -34,6 +34,10 @@ public class MessageExchangeServer extends MessageExchangeBase {
     this.sendRequest(MESSAGE_END_OF_PROCESS);
   }
 
+  public void sendReNewPortNumber(int port) {
+    this.sendRequest(MESSAGE_RENEW_PORT_NUMBER + port);
+  }
+  
   public void sendRequest(String val) {
     this.setRequest(val);
   }
@@ -53,6 +57,7 @@ public class MessageExchangeServer extends MessageExchangeBase {
   public void close() throws IOException {
     super.close();
     this.getServerSocket().close();
+    System.out.println("Server socket is closed.");
   }
 
   public static ServerSocket getAvailableServerSocket() {

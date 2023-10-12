@@ -38,6 +38,14 @@ public class MessageExchangeClient extends MessageExchangeBase {
     if (val != null && val.indexOf(MESSAGE_END_OF_PROCESS) == 0) {
       throw new MessageDoneException();
     }
+
+    if (val != null && val.indexOf(MESSAGE_RENEW_PORT_NUMBER) == 0) {
+      val = val.replace(MESSAGE_RENEW_PORT_NUMBER, "");
+      MessageRenewPortException exception = new MessageRenewPortException();
+      exception.setPort(Integer.parseInt(val));
+      throw exception;
+    }
+
     return message;
   }
 

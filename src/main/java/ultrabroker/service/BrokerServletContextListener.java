@@ -1,5 +1,7 @@
 package ultrabroker.service;
 
+import java.io.IOException;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -16,12 +18,22 @@ public class BrokerServletContextListener extends WorkerRegister implements Serv
       
       TimeUtil.waitForSeconds(1);
 
-      this.getProcessManager().stopAllWorkers();
+      stopAllWorkers();
       
       TimeUtil.waitForSeconds(1);
       
-      this.getProcessManager().stopAllWorkers(); // make sure queued requests are also cleared
-
+      stopAllWorkers();
+      
       System.out.println("Web application is shutting down. All workers are terminated.");
+    }
+    
+    private void stopAllWorkers() {
+      try {
+        this.getProcessManager().stopAllWorkers();
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+      
     }
 }

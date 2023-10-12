@@ -9,4 +9,7 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <listener>
+   <listener-class>ultrabroker.service.BrokerServletContextListener</listener-class>
+  </listener>
 </web-app>

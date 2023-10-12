@@ -25,13 +25,13 @@ public class Broker extends WorkerRegister {
       if (ProcessManager.CloseServletContainer) { // at shutdown, this if block may be required.
         return;
       }
-      
       processObject.getBrokerServer().sendRequest(req);
       response.getWriter().append(processObject.getBrokerServer().getResponse().toString());
     }
     catch(Exception e) {
       if (processObject == null) { // possibly the above getProcessObject method returns null.
         response.getWriter().append("Please re-try.");
+        e.printStackTrace();
         return;
       }
       

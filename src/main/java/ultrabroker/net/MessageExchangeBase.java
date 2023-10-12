@@ -10,6 +10,7 @@ import ultrabroker.util.TimeUtil;
 
 public class MessageExchangeBase {
   public static String MESSAGE_END_OF_PROCESS = "__EOP__";
+  public static String MESSAGE_RENEW_PORT_NUMBER = "__RPN__";
 
   private Socket socket;
   private int port;
@@ -71,7 +72,7 @@ public class MessageExchangeBase {
   protected Message readMessage() throws IOException {
     Message message = new Message();
     while (!this.getReader().ready()) {
-      TimeUtil.waitForMilliSeconds(100);
+      TimeUtil.waitForMilliSeconds(10);
     }
     while (this.getReader().ready()) {
       message.add(this.getReader().readLine());

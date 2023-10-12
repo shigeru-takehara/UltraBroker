@@ -2,15 +2,15 @@ package ultrabroker.service.support;
 
 import java.util.stream.Stream;
 
-import ultrabroker.net.MessageExchangeServer;
+import ultrabroker.net.IMessageExchangeServer;
 
 public class ProcessObject {
   private Process process;
-  private MessageExchangeServer brokerServer;
+  private IMessageExchangeServer brokerServer;
   private boolean active;
   private int execCounter;
   
-  public ProcessObject(Process process, MessageExchangeServer server) {
+  public ProcessObject(Process process, IMessageExchangeServer server) {
     this.process = process;
     this.brokerServer = server;
   }
@@ -23,11 +23,11 @@ public class ProcessObject {
     this.process = process;
   }
 
-  public MessageExchangeServer getBrokerServer() {
+  public IMessageExchangeServer getBrokerServer() {
     return brokerServer;
   }
 
-  public void setServerSocket(MessageExchangeServer server) {
+  public void setBrokerServer(IMessageExchangeServer server) {
     this.brokerServer = server;
   }
 

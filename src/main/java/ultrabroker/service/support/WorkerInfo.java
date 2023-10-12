@@ -43,6 +43,10 @@ public class WorkerInfo {
   public List<String> getCommandStringList() {
     return commandStringList;
   }
+  
+  public String[] getCommandStringArray() {
+    return commandStringList.toArray(new String[0]);
+  }
 
   public List<String> getCommandStringListWithPortNumber(int port) {
     List<String> result = new ArrayList<>();
