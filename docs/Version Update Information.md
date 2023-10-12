@@ -19,7 +19,7 @@ Added Performance testing with JMeter.
 
 Added NodeJS communicationExchange components.
 
-Basically, Broker becomes more proctical.
+Basically, Broker becomes more practical.
 
 Version 0.1 (9/3/2023)
 
