@@ -17,7 +17,7 @@ Assuming, Tomcat is running on port 8080.
 | Key-commandLine1 | C:/java/jdk-17/bin/java | It's Java.exe. |
 | Key-commandLine2 | -jar | one of run parameters |
 | Key-commandLine3 | ChildProcess.jar |Runnable Jar, which is located in the root directory. |
-| Key-workingDirectory | C:/UltraBroker1 | The directory where SJA1.jar file is located|
+| Key-workingDirectory | C:/UltraBroker1 | The directory where ChildProcess.jar file is located|
 
 Sample Postman:
 
