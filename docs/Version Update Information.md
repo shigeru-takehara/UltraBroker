@@ -6,6 +6,8 @@ Message communcation is updated to use process input and output stream instead o
 - much faster
 - resolve issues with Powershell and NodeJS where socket communication stops working.
 
+Also all sample programs are updated.
+
 Version 0.2 (9/17/2023)
 
 UltraBroker can
