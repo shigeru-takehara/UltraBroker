@@ -3,8 +3,6 @@ It is:
  - ultra fast
  - ultra simple
  - ultra easy
- - ultra powerful
- - ulra economical (we can manage by ourselves.)
    
   micro-service broker.
 
