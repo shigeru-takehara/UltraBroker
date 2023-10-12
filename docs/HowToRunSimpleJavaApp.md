@@ -69,7 +69,6 @@ Please check the C:\Temp\SimpleJavaApp1-" + port + ".txt file. you might have th
 
 
 
-Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
-](https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md)https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md
+Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md
 
 Go back to https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md
