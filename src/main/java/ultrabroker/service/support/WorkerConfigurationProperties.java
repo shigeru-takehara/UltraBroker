@@ -12,7 +12,7 @@ public class WorkerConfigurationProperties {
   private int retryMilliSeconds = 0;
   private int workerCountMax = 0;
   private int workerRefreshCount = 0;
-  private boolean enableWorkerRefresh = true;
+  private boolean enableWorkerRefresh = false;
   
   public int getExcessWorkerCheckingAccessCount() {
     if (excessWorkerCheckingAccessCount == 0)
