@@ -21,7 +21,7 @@ Assuming, Tomcat is running on port 8080.
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister.PNG "WorkerRegister Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-SJAP.PNG "WorkerRegister Postman")
 
 After it is executed, Response message "Worker registration is success." should be returned.
 
