@@ -14,9 +14,8 @@ How to run sample Powershell script applcation is very much the same as the samp
 | Method      | POST | HTTP Method |
 | URL      | http://localhost:8080/UltraBroker1/WorkerRegister      |   WorkerRegister API where we can register a worker process. |
 | Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
-| Key-workerId | PS1 | Worker ID (You can choose any word) |
+| Key-workerId | PSP | Worker ID (You can choose any word) |
 | Key-commandLine1 | c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat | The batch file that contains execution of Powershell script file. |
-| Key-commandLine2 |  {PORT_NUMBER} | Socket port number, which will be assigned by a Broker object |
 | Key-workingDirectory | c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample | The directory where the batch file is located|
 
 Sample Postman:
