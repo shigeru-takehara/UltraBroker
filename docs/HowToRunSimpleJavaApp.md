@@ -40,7 +40,7 @@ In the above there are other default configuration variables, which are describe
 | Method      | POST | HTTP Method |
 | URL      | http://localhost:8080/UltraBroker1/Broker      |   Call the Broker. |
 | Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
-| Key-id | SJA1 | Worker ID run |
+| Key-id | SJAP | Worker ID run |
 | Key-request | a string value | Request data |
 
 Sample Postman:
