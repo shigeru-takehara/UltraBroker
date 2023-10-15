@@ -65,7 +65,7 @@ public class WorkerRegister extends HttpServlet {
     workerInfo.getConfigurationProperties().setWorkerRefreshCount(StringUtil.isEmpty(workerRefreshCount) ? 
         0 : Integer.parseInt(workerRefreshCount));
     workerInfo.getConfigurationProperties().setEnableWorkerRefresh(StringUtil.isEmpty(enableWorkerRefresh) ? 
-        true :Boolean.parseBoolean(enableWorkerRefresh));
+        false :Boolean.parseBoolean(enableWorkerRefresh));
     
     this.getProcessManager().registerWorker(workerInfo);
 
