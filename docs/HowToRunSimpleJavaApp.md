@@ -29,7 +29,7 @@ After it is executed, Response message "Worker registration is success." should 
 
 Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which should return something like:
 
-`<HTML><p>SJAP=Id:SJAP, CommandLine1:C:/java/jdk-17/bin/java, CommandLine2:-jar, CommandLine3:ChildProcess.jar, CommandLine4:{PORT_NUMBER}, WorkingDirectory:C:\Users\STAKEHAR\eclipse-workspace\UltraBroker.net, excessWorkerCheckingAccessCount:1000, retryCount:600, retryMilliSeconds:100, workerCountMax:5, workerRefreshCount:100, enableWorkerRefresh:false</p></HTML>`
+`<HTML><p>SJAP=Id:SJAP, CommandLine1:C:/java/jdk-17/bin/java, CommandLine2:-jar, CommandLine3:ChildProcess.jar, WorkingDirectory:C:\Users\STAKEHAR\eclipse-workspace\UltraBroker.net, excessWorkerCheckingAccessCount:1000, retryCount:600, retryMilliSeconds:100, workerCountMax:5, workerRefreshCount:100, enableWorkerRefresh:false</p></HTML>`
 
 In the above there are other default configuration variables, which are described in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/WorkerRegistration.md.
 
