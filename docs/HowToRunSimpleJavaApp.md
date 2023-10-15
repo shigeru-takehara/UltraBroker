@@ -55,18 +55,6 @@ Call RegisterWorker again with different parameters as follows:
 
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-Stop.PNG "WorkerRegister Stop Postman")
 
-Please check the C:\Temp\SimpleJavaApp1-" + port + ".txt file. you might have the content like this.
-
-`SimpleJavaApp1 Started.`
-
-`Client received: Hello good bye`
-
-`Client received: Hello good bye`
-
-`SimpleJavaApp1 Ended.`
-
-
-
 
 Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md
 
