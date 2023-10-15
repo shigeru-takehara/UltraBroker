@@ -50,7 +50,7 @@ Sample Postman:
 
 **Step 4: Stop the worker.**
 
-Call RegisterWorker again with different parameters as follows:
+Call RegisterWorker as follows:
 
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-Stop.PNG "WorkerRegister Stop Postman")
 
