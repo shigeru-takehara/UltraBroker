@@ -27,7 +27,7 @@ Sample Postman:
 
 Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which should return something like:
 
-`<HTML><p>PS1=Id:PSAP, CommandLine1:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat, CommandLine2:{PORT_NUMBER}, WorkingDirectory:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample</p></HTML>`
+`<HTML><p>PSAP=Id:PSAP, CommandLine1:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellProcessApp1.bat, WorkingDirectory:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample, excessWorkerCheckingAccessCount:1000, retryCount:600, retryMilliSeconds:100, workerCountMax:5, workerRefreshCount:100, enableWorkerRefresh:false</p></HTML>`
 
 **Step 3: Run the worker.**
 
@@ -36,14 +36,13 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 | Method      | POST | HTTP Method |
 | URL      | http://localhost:8080/UltraBroker1/Broker      |   Call the Broker. |
 | Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
-| Key-id | PSP | Worker ID run |
+| Key-id | PSAP | Worker ID run |
 | Key-request | a string value | Request data |
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-PSP.PNG "Calling Broker Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-PSAP.PNG "Calling Broker Postman")
 
-If you have many access, setting workerRefreshCount variable is recommended. The value should be 90. Based on experience, the more than 97 acess makes socket port communication stop working. This does not occur on Java application, and it occurs on Powershell application. The cause of issue has not been found. If we set the workerRefreshCount, it runs good.
 
 **Step 4: Stop the worker.**
 
