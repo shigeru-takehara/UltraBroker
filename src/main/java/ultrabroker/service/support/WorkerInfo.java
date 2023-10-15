@@ -70,9 +70,6 @@ public class WorkerInfo {
       }
       list.add(val);
     }
-    if (!this.portNumberExistInCommandLine) {
-      list.add(PORT_NUMBER_PARAM);
-    }
     this.setCommandStringList(list);
   }
 
