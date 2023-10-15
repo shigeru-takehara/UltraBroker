@@ -14,20 +14,20 @@ How to run sample Powershell script applcation is very much the same as the samp
 | Method      | POST | HTTP Method |
 | URL      | http://localhost:8080/UltraBroker1/WorkerRegister      |   WorkerRegister API where we can register a worker process. |
 | Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
-| Key-workerId | PSP | Worker ID (You can choose any word) |
+| Key-workerId | PSAP | Worker ID (You can choose any word) |
 | Key-commandLine1 | c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat | The batch file that contains execution of Powershell script file. |
 | Key-workingDirectory | c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample | The directory where the batch file is located|
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-PSP.PNG "WorkerRegister Powerscript Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-PSAP.PNG "WorkerRegister Powerscript Postman")
 
 
 **Step 2: Check the worker registration.**
 
 Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which should return something like:
 
-`<HTML><p>PS1=Id:PS1, CommandLine1:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat, CommandLine2:{PORT_NUMBER}, WorkingDirectory:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample</p></HTML>`
+`<HTML><p>PS1=Id:PSAP, CommandLine1:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat, CommandLine2:{PORT_NUMBER}, WorkingDirectory:c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample</p></HTML>`
 
 **Step 3: Run the worker.**
 
