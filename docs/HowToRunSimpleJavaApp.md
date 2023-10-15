@@ -47,7 +47,6 @@ Sample Postman:
 
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-SJAP.PNG "Calling Broker Postman")
 
-It returns the Response, and also it logs in C:\Temp\SimpleJavaApp1-" + port + ".txt file.
 
 **Step 4: Stop the worker.**
 
