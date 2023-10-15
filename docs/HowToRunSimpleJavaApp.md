@@ -45,7 +45,7 @@ In the above there are other default configuration variables, which are describe
 
 Sample Postman:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker.PNG "Calling Broker Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-Broker-SJAP.PNG "Calling Broker Postman")
 
 It returns the Response, and also it logs in C:\Temp\SimpleJavaApp1-" + port + ".txt file.
 
