@@ -74,6 +74,6 @@ You can use a debugger, but since workers use standard input for receiving a req
 
 Eaxampl:
 
-![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-SJAP.PNG "WorkerRegister Postman")
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Run%20a%20Worker%20from%20console.PNG "Run a Worker from console")
   
 Go back to main readme file: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
