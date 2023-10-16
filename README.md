@@ -38,4 +38,6 @@ We may need to generate one jar file. Please read https://github.com/shigeru-tak
 
 How to run UltraBroker server is described in https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
 
+How to develop a worker is described in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/HowToDevelopAWorker.md.
+
 Version update information: https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/Version%20Update%20Information.md
