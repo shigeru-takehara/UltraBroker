@@ -32,8 +32,23 @@ public class ChildProcess implements IClientProcessMessageProcessor {
 ```
 
 
-## How to Develop a Poweershell script Worker
+## How to Develop a Powershell script Worker
+### Step 1 Develop $customPRocessRequest function in a ps1 file where it should take $request variable and add a logic of response.
+### Step 2 Call .\ProcessMessageExchangeClient.ps1 with $customProcessRequest function as follows.
+```
+$global:count = 0
 
+# Example custom ProcessRequest function
+$customProcessRequest = {
+    param ($request)
+    # Your custom processing logic here
+	$global:count++
+    return "Custom processing: $request " + $global:count
+}
+
+# Run MessageProcessing.ps1 with the custom ProcessRequest function
+.\ProcessMessageExchangeClient.ps1 -ProcessRequest $customProcessRequest
+```
 
 ## How to Develop a NodeJS TypeScript Worker
 
