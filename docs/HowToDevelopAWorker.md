@@ -51,4 +51,18 @@ $customProcessRequest = {
 ```
 
 ## How to Develop a NodeJS TypeScript Worker
+### Step 1 Develop processRequest(request: string): string function and add a logic of response.
+### Step 2 Import ProcessOperation function from ./ProcessMessageExchangeClient.
+### Step 3 Call ProcessOperation by passing processRequest function.
 
+**Example:**
+
+```
+import { ProcessOperation } from './ProcessMessageExchangeClient';
+
+function processRequest(request: string): string {
+    return "!!!!client echo:" + request;
+}
+
+ProcessOperation(processRequest);
+```
