@@ -9,7 +9,7 @@ It is:
 
 Simply put, this broker can have the following things.
 - we can set the maximum number of processes for a worker.
-- The number of processes are automatically adjusted based on the the number of accesses
+- The number of processes are automatically adjusted based on the the access volume
 - A worker configuration can be hot updated under being executed.
 - we can manage workers (stop, start, and refresh). (not complete)
 - it's secure since broker objects and worker processors run on the same hardware.
