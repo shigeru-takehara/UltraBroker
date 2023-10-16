@@ -67,4 +67,13 @@ function processRequest(request: string): string {
 ProcessOperation(processRequest);
 ```
 
+## How to Debug
+You can use a debugger, but since workers use standard input for receiving a request, you can send your request from your console or command window. There are two special strings:
+- `__DEL__`: this is the request delimitor.
+- `__EOP__`: this is the process end request string.
+
+Eaxampl:
+
+
+  
 Go back to main readme file: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
