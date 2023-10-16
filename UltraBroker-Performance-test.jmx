@@ -12,7 +12,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Sample Workers Registration" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Sample Workers Registration" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -63,50 +63,29 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PowerScript Sample Application 1 Registration" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PowerScript Sample Application Registration" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="workerId" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">PS1</stringProp>
+                <stringProp name="Argument.value">PSAP</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workerId</stringProp>
               </elementProp>
               <elementProp name="commandLine1" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">c:\0\UltraBroker1\src\main\powershell\sample\PowerShellApp.bat</stringProp>
+                <stringProp name="Argument.value">c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample\PowerShellProcessApp1.bat</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">commandLine1</stringProp>
               </elementProp>
-              <elementProp name="commandLine2" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{PORT_NUMBER}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">commandLine2</stringProp>
-              </elementProp>
               <elementProp name="workingDirectory" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">c:\0\UltraBroker1\src\main\powershell\sample</stringProp>
+                <stringProp name="Argument.value">c:\Users\STAKEHAR\eclipse-workspace\UltraBroker1\src\main\powershell\sample</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workingDirectory</stringProp>
-              </elementProp>
-              <elementProp name="excessWorkerCheckingAccessCount" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">200</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">excessWorkerCheckingAccessCount</stringProp>
-              </elementProp>
-              <elementProp name="workerRefreshCount" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">90</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">workerRefreshCount</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -125,12 +104,12 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Java Sample Application 1 Registration" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Java Sample Application Registration" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="workerId" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">SJA1</stringProp>
+                <stringProp name="Argument.value">SJAP</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workerId</stringProp>
@@ -151,31 +130,17 @@
               </elementProp>
               <elementProp name="commandLine3" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">SJA1.jar</stringProp>
+                <stringProp name="Argument.value">ChildProcess.jar</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">commandLine3</stringProp>
               </elementProp>
-              <elementProp name="commandLine4" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{PORT_NUMBER}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">commandLine4</stringProp>
-              </elementProp>
               <elementProp name="workingDirectory" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">C:\0\UltraBroker1</stringProp>
+                <stringProp name="Argument.value">C:\Users\STAKEHAR\eclipse-workspace\UltraBroker.net</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workingDirectory</stringProp>
-              </elementProp>
-              <elementProp name="enableWorkerRefresh" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">false</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">enableWorkerRefresh</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -194,12 +159,12 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Node JS Sample Application 1 Registration" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Node JS Sample Application Registration" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="workerId" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">NJA1</stringProp>
+                <stringProp name="Argument.value">NJAP</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workerId</stringProp>
@@ -213,17 +178,10 @@
               </elementProp>
               <elementProp name="commandLine2" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">NodeJSApp1.js</stringProp>
+                <stringProp name="Argument.value">NodeJSProcessApp1.js</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">commandLine2</stringProp>
-              </elementProp>
-              <elementProp name="commandLine3" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{PORT_NUMBER}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">commandLine3</stringProp>
               </elementProp>
               <elementProp name="workingDirectory" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
@@ -231,20 +189,6 @@
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">workingDirectory</stringProp>
-              </elementProp>
-              <elementProp name="enableWorkerRefresh" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">true</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">enableWorkerRefresh</stringProp>
-              </elementProp>
-              <elementProp name="workerRefreshCount" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">160</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-                <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                <stringProp name="Argument.name">workerRefreshCount</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
@@ -284,17 +228,18 @@
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Sample Programs Performance Testing" enabled="true">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">12</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">60</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
@@ -371,12 +316,12 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PS1 Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PSAP  Request" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="id" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">PS1</stringProp>
+                <stringProp name="Argument.value">PSAP</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">id</stringProp>
@@ -405,19 +350,19 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SJA1 Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="NJAP Request" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="id" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">SJA1</stringProp>
+                <stringProp name="Argument.value">NJAP</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">id</stringProp>
               </elementProp>
               <elementProp name="request" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">U2ltcGxlSmF2YUFwcDEgU3RhcnRlZC4KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KQ2xpZW50IHJlY2VpdmVkOiBIZWxsbwpDbGllbnQgcmVjZWl2ZWQ6IEhlbGxvCkNsaWVudCByZWNlaXZlZDogSGVsbG8KU2ltcGxlSmF2YUFwcDEgRW5kZWQuCg==</stringProp>
+                <stringProp name="Argument.value">Hello</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">request</stringProp>
@@ -439,19 +384,19 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="NJA1 Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SJAP Request" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="id" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">NJA1</stringProp>
+                <stringProp name="Argument.value">SJAP</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">id</stringProp>
               </elementProp>
               <elementProp name="request" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">Hello Server </stringProp>
+                <stringProp name="Argument.value">Hello</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">request</stringProp>
@@ -474,7 +419,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Reset All Workers" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Reset All Workers" enabled="false">
         <stringProp name="TestPlan.comments">All worker processes are terminated, but worker registration information stays.</stringProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
