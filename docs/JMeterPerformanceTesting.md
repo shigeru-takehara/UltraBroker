@@ -11,11 +11,6 @@ In this file, there are three groups:
 
 Each group can be executed independently by Clicking context menu item "Start".
 
-Before running Sample Workers Registration, please update registration parameters in PS1 and SJA1 Registrations.
-Registration information is located in 
-- https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/sample/javaapp/README.md
-- https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/powershell/sample/README.md
-
 Complete worker registration inforamation is in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/WorkerRegistration.md.
 
   
