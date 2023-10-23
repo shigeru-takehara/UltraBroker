@@ -1,5 +1,10 @@
 # Version Update Inforamtion
 
+Version 0.31 (10/22/2023)
+
+Python communicationExchange component. Now we can run multiple Python workers.
+
+
 Version 0.3 (10/11/2023)
 
 Message communcation is updated to use process input and output stream instead of sockets, which makes UltraBraker:
