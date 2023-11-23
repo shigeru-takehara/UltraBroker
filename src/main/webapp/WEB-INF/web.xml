@@ -9,6 +9,16 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+   
+  <servlet>
+    <servlet-name>UltraBroker</servlet-name>
+    <servlet-class>ultrabroker.service.Broker</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UltraBroker</servlet-name>
+    <url-pattern>/Broker/*</url-pattern> 
+  </servlet-mapping>
+   
   <listener>
    <listener-class>ultrabroker.service.BrokerServletContextListener</listener-class>
   </listener>
