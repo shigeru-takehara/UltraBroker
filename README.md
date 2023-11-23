@@ -1,4 +1,4 @@
-# UltraBroker - Version 0.3 
+# UltraBroker - Version 0.4 Updating all readme files currently
 
 It is:
  - ultra fast
@@ -8,8 +8,9 @@ It is:
   micro-service broker.
 
 Simply put, this broker can have the following things.
+- Support both processed based workers and thread based workers e.g. Spring boot apps
 - we can set the maximum number of processes for a worker.
-- The number of processes are automatically adjusted based on the the access volume
+- The number of processes are automatically adjusted based on the the access volume for process based workers
 - A worker configuration can be hot updated under being executed.
 - we can manage workers (stop, start, and refresh). (not complete)
 - it's secure since broker objects and worker processors run on the same hardware.
