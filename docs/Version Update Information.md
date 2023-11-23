@@ -1,5 +1,10 @@
 # Version Update Inforamtion
 
+Version 0.4 (11/23/2023)
+
+- Support thread or http based applications and support REST oeprations.
+- The worker ID is moved onto a part of URL.
+  
 Version 0.31 (10/22/2023)
 
 Python communicationExchange component. Now we can run multiple Python workers.
