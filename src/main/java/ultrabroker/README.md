@@ -25,4 +25,6 @@ How to run Simple Powershell appliaction: https://github.com/shigeru-takehara/Ul
 
 How to run Simple NodeJS Application: https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/nodejs/sample/README.md.
 
+How to define HTTP based applications as workers: https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/HowToDefineHTTPBasedAppAsWorker.md.
+
 Go back to the main README.md: https://github.com/shigeru-takehara/UltraBroker/blob/main/README.md.
