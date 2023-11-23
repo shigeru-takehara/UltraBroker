@@ -30,6 +30,7 @@ Currently the following communication components are provided:
 - Powershell
 - NodeJS (TypeScript/JavaScript)
 - Python
+- Thread based or http based apps
 
 Our development uses Tomcat servlet container. You should be able to use any servlet container other than Tomcat, but our documentation will always use the Tomcat.
 
