@@ -67,6 +67,10 @@ public class WorkerRegister extends HttpServlet {
     workerInfo.getConfigurationProperties().setEnableWorkerRefresh(StringUtil.isEmpty(enableWorkerRefresh) ? 
         false :Boolean.parseBoolean(enableWorkerRefresh));
     
+    if (WorkerInfo.isHTTPWorker(workerId)) {
+      workerInfo.setWorkingDirectory("Not Used");
+    }
+    
     this.getProcessManager().registerWorker(workerInfo);
 
     response.getWriter()
@@ -74,6 +78,14 @@ public class WorkerRegister extends HttpServlet {
   }
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    doGet(request, response);
+  }
+
+  protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    doGet(request, response);
+  }
+
+  protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }
 

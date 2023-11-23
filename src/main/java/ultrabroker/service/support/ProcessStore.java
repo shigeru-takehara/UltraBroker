@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
+import ultrabroker.net.HTTPMessageExchangeServer;
 import ultrabroker.net.ProcessMessageExchangeServer;
+
 
 public class ProcessStore extends ArrayList<ProcessObject> {
   private static final long serialVersionUID = 1L;
@@ -21,14 +23,22 @@ public class ProcessStore extends ArrayList<ProcessObject> {
   public ProcessObject getInactiveProcessObject() throws IOException {
     int size = this.size();
 
+    if (WorkerInfo.isHTTPWorker(workerInfo.getId())) {
+      if (size == 0) {
+        HTTPMessageExchangeServer server = new HTTPMessageExchangeServer(this.getWorkerInfo().getCommandStringArray(), null, null);
+        ProcessObject po = new ProcessObject(null, server);
+        this.add(po);
+      }
+      return this.get(0);
+    }
+    
     for (int j=0; j<this.getWorkerInfo().getConfigurationProperties().getRetryCount(); j++) {
       for (int i=0; i<size; i++) {
         if (!this.get(i).isActive()) {
           cleanupExcessWorker(size, i);
-//          System.out.println("ProcessObject Index=" + i + "  ExecCount=" + this.get(i).getExecCounter() + "  WorkerRefreshCount=" + this.getWorkerInfo().getConfigurationProperties().getWorkerRefreshCount());
           if (this.getWorkerInfo().getConfigurationProperties().isEnableWorkerRefresh() && 
               this.get(i).getExecCounter() > this.getWorkerInfo().getConfigurationProperties().getWorkerRefreshCount()) {
-            System.out.println("--------Refreshing workerId=" + this.getWorkerInfo().getId());
+//            System.out.println("--------Refreshing workerId=" + this.getWorkerInfo().getId());
             closeClientAndServer(this.get(i));
             this.remove(i);
             return createProcessObject();
@@ -56,7 +66,7 @@ public class ProcessStore extends ArrayList<ProcessObject> {
     this.incrementAccessCount();
     if (this.getAccessCount() > this.getWorkerInfo().getConfigurationProperties().getExcessWorkerCheckingAccessCount()) {
       if (!this.get(currentSize-1).isActive()) {
-        System.out.println("one worker closed workerId=" + this.getWorkerInfo().getId());
+//        System.out.println("one worker closed workerId=" + this.getWorkerInfo().getId());
         this.closeClientAndServer(this.get(currentSize -1));
         this.remove(currentSize - 1);
       }

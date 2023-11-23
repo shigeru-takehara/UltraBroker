@@ -5,6 +5,7 @@ import java.util.List;
 
 public class WorkerInfo {
   public static final String PORT_NUMBER_PARAM = "{PORT_NUMBER}";
+  public static final String PREFIX_HTTP = "HTTP-";
 
   private String id;
   private List<String> commandStringList;
@@ -12,6 +13,10 @@ public class WorkerInfo {
   private boolean portNumberExistInCommandLine;
   private WorkerConfigurationProperties configurationProperties = new WorkerConfigurationProperties();
   private WorkerRuntimeProperties runtimeProperties = new WorkerRuntimeProperties();
+  
+  public static boolean isHTTPWorker(String workerId) {
+    return workerId.indexOf(PREFIX_HTTP) == 0;
+  }
   
   public String getId() {
     if (id == null)

@@ -2,6 +2,7 @@ package ultrabroker.service.support;
 
 import java.util.stream.Stream;
 
+import ultrabroker.net.HTTPMessageExchangeServer;
 import ultrabroker.net.IMessageExchangeServer;
 
 public class ProcessObject {
@@ -9,6 +10,8 @@ public class ProcessObject {
   private IMessageExchangeServer brokerServer;
   private boolean active;
   private int execCounter;
+  private String httpMethod;
+  private String pathString;
   
   public ProcessObject(Process process, IMessageExchangeServer server) {
     this.process = process;
@@ -60,4 +63,27 @@ public class ProcessObject {
       phStream.forEachOrdered(ph -> ph.destroy());
       this.getProcess().destroy();
     }
+
+    public String getHttpMethod() {
+      return httpMethod;
+    }
+
+    public void setHttpMethod(String httpMethod) {
+      this.httpMethod = httpMethod;
+      if (this.getBrokerServer() instanceof HTTPMessageExchangeServer) {
+        ((HTTPMessageExchangeServer)this.getBrokerServer()).setHttpMethod(httpMethod);
+      }
+    }
+
+    public String getPathString() {
+      return pathString;
+    }
+
+    public void setPathString(String pathString) {
+      this.pathString = pathString;
+      if (this.getBrokerServer() instanceof HTTPMessageExchangeServer) {
+        ((HTTPMessageExchangeServer)this.getBrokerServer()).setPathString(pathString);
+      }
+    }
+
 }
