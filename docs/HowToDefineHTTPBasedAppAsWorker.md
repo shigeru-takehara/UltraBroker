@@ -13,3 +13,10 @@ HTTP based applications such as Node JS based, J2EE based, CGI based, and other 
 | Key-commandLine2 | https://yahoo.com | URL 1 |
 | Key-commandLine3 | https://yahoo.com |URL 2 |
 | Key-commandLine4 | https://yahoo.com |URL 3 |
+There are three URLs defined, but it uses 2 URLs because the number of active URLs is 2.
+
+Sample Postman:
+
+![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-HTTP.PNG "WorkerRegister Postman")
+
+After it is executed, Response message "Worker registration is success." should be returned.
