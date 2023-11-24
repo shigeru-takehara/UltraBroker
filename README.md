@@ -1,4 +1,4 @@
-# UltraBroker - Version 0.4 Updating all readme files currently
+# UltraBroker - Version 0.4 
 
 It is:
  - ultra fast
