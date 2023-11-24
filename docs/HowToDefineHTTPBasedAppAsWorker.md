@@ -33,9 +33,9 @@ WorkingDirectory, excessWorkerCheckingAccessCount, retryCount, retryMilliSeconds
 
 | Object        | Value           | Description  |
 | ------------- |:-------------:| -----:|
-| Method      | POST | HTTP Method |
+| Method      | POST | HTTP Method (Support POST, GET, DELETE, and PUT) |
 | URL      | http://localhost:8080/UltraBroker1/Broker/HTTP-YAHOO      |   Call the Broker. |
-| Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
+| Body | a string value (if needed)    |     |
 
 Sample Postman:
 
