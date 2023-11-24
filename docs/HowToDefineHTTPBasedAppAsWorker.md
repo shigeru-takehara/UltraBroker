@@ -1,1 +1,15 @@
 # How to Define HTTP Based Application as Worker
+HTTP based applications such as Node JS based, J2EE based, CGI based, and other HTTP based applications can be defined in the UltraBroker as workers. When the multiple applications are defined, it will be executed in round robin. 
+
+## Step 1: Register HTTP based applications
+
+| Object        | Value           | Description  |
+| ------------- |:-------------:| -----:|
+| Method      | POST | HTTP Method |
+| URL      | http://localhost:8080/UltraBroker1/WorkerRegister      |   WorkerRegister API where we can register a worker process. |
+| Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
+| Key-workerId | HTTP-YAHOO | Worker ID (You can choose any word with prefix "HTTP-") |
+| Key-commandLine1 | 2 | The number of active URLs |
+| Key-commandLine2 | https://yahoo.com | URL 1 |
+| Key-commandLine3 | https://yahoo.com |URL 2 |
+| Key-commandLine4 | https://yahoo.com |URL 3 |
