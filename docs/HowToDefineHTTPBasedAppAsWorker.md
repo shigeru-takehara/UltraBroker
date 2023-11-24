@@ -53,4 +53,18 @@ Go back to "How to run UltraBroker server": https://github.com/shigeru-takehara/
 
 Go back to https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md
 
+## An Example
 
+Let's say you have a HTTP application and its URL is https://myapp.com, which is a REST application and you can manage your contact information. You could do such as:
+- POST https://myapp.com/contact/FirstName-LastName
+- GET https://myapp.com/contact/FirstName-LastName
+- DELETE https://myapp.com/contact/FirstName-LastName
+- PUT https://myapp.com/contact/Firstname-LastName
+
+When you register this application, let's say we use HTTP-MYAPP as worker Id and URL is https://myapp.com/contact. 
+If Broker URL is https://UltraBroker, then we could call:
+- POST https://UltraBroker/HTTP-MYAPP/FirstName-LastName
+- GET https://UltraBroker/HTTP-MYAPP/FirstName-LastName
+- DELETE https://UltraBroker/HTTP-MYAPP/FirstName-LastName
+- PUT https://UltraBroker/HTTP-MYAPP/FirstName-LastName
+  
