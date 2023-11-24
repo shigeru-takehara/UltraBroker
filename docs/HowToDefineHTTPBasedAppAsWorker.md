@@ -20,3 +20,12 @@ Sample Postman:
 ![alt text](https://github.com/shigeru-takehara/UltraBroker/blob/main/images/Postman-WorkerRegister-HTTP.PNG "WorkerRegister Postman")
 
 After it is executed, Response message "Worker registration is success." should be returned.
+
+Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which should return something like:
+
+`<HTML><p>HTTP-YAHOO=Id:HTTP-YAHOO, CommandLine1:2, CommandLine2:https://yahoo.com, CommandLine3:https://yahoo.com, WorkingDirectory:Not Used, excessWorkerCheckingAccessCount:1000, retryCount:600, retryMilliSeconds:100, workerCountMax:5, workerRefreshCount:100, enableWorkerRefresh:false</p></HTML>`
+
+WorkingDirectory, excessWorkerCheckingAccessCount, retryCount, retryMilliSeconds, workerCountMax, workerRefreshCount, and enableWorkerRefresh are not used.
+
+
+
