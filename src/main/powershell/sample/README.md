@@ -35,7 +35,7 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 | ------------- |:-------------:| -----:|
 | Method      | POST | HTTP Method |
 | URL      | http://localhost:8080/UltraBroker1/Broker/PSAP      |   Call the Broker. |
-| Body | x-www-form-urlencoded      |    It's a type of Post Content (It will be Key/Vaue pair |
+| Body | string value     |    It's a type of Post Content  |
 
 Sample Postman:
 
