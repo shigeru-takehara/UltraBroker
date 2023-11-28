@@ -20,7 +20,7 @@ This broker is inspired by MajorDomo protocol (https://rfc.zeromq.org/spec/7/).
 
 In Java, there is very stable Servlet container, that is in a way similar to handle servlet objects while the MajoDomo handles workers. Combining the concept of the MajoDomo and maturity and stability of the Servlet container, we could build a broker that would does like the Major protocol, which is this UltraBroker.
 
-There is one important runtime evnrionment rule-Broker objects (Servets) and workers (processes) must run on the same hardware.
+There is one important runtime evnrionment rule-Broker objects (Servets) and workers (processes) must run on the same hardware except HTTP based workers, which can be run on other servers.
 If you need to run many more workers, you could run it on more hardwares with a proxy server.
 
 The request information must be characters or string value based. The current Java and Powerscript based communication compontents can handle new lines; therefore, we can send multiple lines in a request. It is depends on how we build commuication component libraries.
