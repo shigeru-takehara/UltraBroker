@@ -1,5 +1,10 @@
 # Version Update Inforamtion
 
+Version 0.41 (12/6/2023)
+
+- Removed UltraBrokerNet.jar file.
+- Added How to Setup Project in Eclipse document.
+  
 Version 0.4 (11/23/2023)
 
 - Support thread or http based applications and support REST oeprations.
