@@ -37,8 +37,6 @@ Our development uses Tomcat servlet container. You should be able to use any ser
 - Java JDK 17 or later
 - Apache Tomcat 9 or later
   
-We may need to generate one jar file. Please read https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/net/README.md.
-
 How to run UltraBroker server is described in https://github.com/shigeru-takehara/UltraBroker/blob/main/src/main/java/ultrabroker/README.md.
 
 How to develop a worker is described in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/HowToDevelopAWorker.md.
