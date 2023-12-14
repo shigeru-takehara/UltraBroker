@@ -33,6 +33,8 @@ Use GET method and call http://localhost:8080/UltraBroker1/WorkerReporter, which
 
 In the above there are other default configuration variables, which are described in https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/WorkerRegistration.md.
 
+Please read https://github.com/shigeru-takehara/UltraBroker/blob/main/docs/HowToSetupSampleJavaChildProgram.md to generate ChildProcess.jar file.
+
 **Step 3: Run the worker.**
 
 | Object        | Value           | Description  |
